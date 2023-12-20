@@ -297,6 +297,10 @@ public class Driver {
 
 	private static void AddToArray(Object[] array, Object obj) {
 		int size = getActualLength(array);
+		if(size==array.length) {
+			System.out.println("The array is full. Add to array failed.");
+			return;
+		}
 		array[size] = obj;
 	}
 
